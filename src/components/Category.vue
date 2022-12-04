@@ -1,5 +1,7 @@
 <template>
-    <div>
+
+<div class="container-fluid">
+  <div>
         <a href="#/category/create" class="btn btn-primary">Crear</a>
     </div>
     <div>
@@ -22,6 +24,9 @@
   </tbody>
 </table>
     </div>
+
+</div>
+    
 </template>
 
 <script>

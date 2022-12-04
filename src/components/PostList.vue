@@ -1,4 +1,6 @@
 <template>
+<div class="container-fluid">
+
     <div>
         <a href="#/post/create" class="btn btn-primary">Crear</a>
     </div>
@@ -29,6 +31,8 @@
   </tbody>
 </table>
     </div>
+</div>
+
 </template>
 
 <script>

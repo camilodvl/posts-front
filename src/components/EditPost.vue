@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Registrar Post</h1>
+        <h1>Editar Post</h1>
         <form @submit="updatePost">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
