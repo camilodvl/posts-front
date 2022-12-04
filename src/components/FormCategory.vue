@@ -1,5 +1,6 @@
 <template>
-    <h1>Registrar Categoria</h1>
+    <div class="container">
+        <h1>Registrar Categoria</h1>
     <form @submit="createCategory">
   <div class="form-group">
     <label for="nombre">Nombre</label>
@@ -12,6 +13,8 @@
   </div>
   <button class="btn btn-primary">Crear</button>
 </form>
+    </div>
+   
 </template>
 
 <script>
