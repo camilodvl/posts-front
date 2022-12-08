@@ -41,10 +41,9 @@ export default{
     },
 
     created(){
-        fetch('http://127.0.0.1:8000/api/category/all')
+          fetch('http://127.0.0.1:8000/api/category/all')
         .then(response => response.json())
         .then((data)=> (this.categorias = data))
-        .then(data=> (console.log(this.categorias)))
     },
     methods:{
         deleteCategory(id){

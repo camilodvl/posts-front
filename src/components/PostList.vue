@@ -47,12 +47,13 @@ export default{
         }
     },
 
-    created(){
-        fetch('http://localhost:8000/api/post/all')
+    async created(){
+        await fetch('http://localhost:8000/api/post/all')
         .then(response => response.json())
         .then((data)=> (this.posts = data))
+        .then()
 
-        fetch('http://127.0.0.1:8000/api/category/all')
+        await fetch('http://127.0.0.1:8000/api/category/all')
         .then(response => response.json())
         .then((data)=> (this.categorias = data))
     },

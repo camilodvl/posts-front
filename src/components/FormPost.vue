@@ -14,10 +14,21 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Categoria</label>
-                <select class="form-control" id="exampleFormControlSelect1" v-model="formData.category_id">
+                <select class="form-control" id="category" v-model="formData.category_id">
                     <template v-for="categoria in categorias.data">
                         <option v-bind:value="categoria.id">{{categoria.name}}</option>
                     </template>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Estado</label>
+                <select class="form-control" id="state" v-model="formData.state">
+ 
+                        <option v-bind:value="'Publicado'">Publicado</option>
+                        <option v-bind:value="'No Publicado'">No Publicado</option>
+
                     
                 </select>
             </div>
@@ -41,7 +52,7 @@ export default {
                 name: '',
                 description: '',
                 category_id: '',
-                state: 'Publicado'
+                state: ''
             }
         }
     },

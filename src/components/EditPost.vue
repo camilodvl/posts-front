@@ -8,13 +8,13 @@
                     v-model="post.data.name">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Descripcion</label>
-                <input type="text" class="form-control" id="description" placeholder="Ingrese descripcion del post"
+                <label for="descr">Descripcion</label>
+                <input type="text" class="form-control" id="descr" placeholder="Ingrese descripcion del post"
                     v-model="post.data.description">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Categoria</label>
-                <select class="form-control" id="exampleFormControlSelect1" v-model="post.data.category_id">
+                <label for="category">Categoria</label>
+                <select class="form-control" id="category" v-model="post.data.category_id">
                     <template v-for="categoria in categorias.data">
                         <option v-bind:value="categoria.id">{{categoria.name}}</option>
                     </template>
@@ -22,8 +22,19 @@
                 </select>
             </div>
 
+            <div class="form-group">
+                <label for="state">Estado</label>
+                <select class="form-control" id="state" v-model="post.data.state">
+ 
+                    <option v-bind:value="'Publicado'">Publicado</option>
+                    <option v-bind:value="'No Publicado'">No Publicado</option>
 
-            <button class="btn btn-primary">Crear</button>
+                    
+                </select>
+            </div>
+
+
+            <button class="btn btn-primary">Actualizar</button>
         </form>
     </div>
 
@@ -43,7 +54,7 @@ export default {
                 name: '',
                 description: '',
                 category_id: '',
-                state: 'Publicado'
+                state: ''
             }
         }
     },
@@ -62,8 +73,9 @@ export default {
     methods: {
         updatePost() {
             axios.put('http://localhost:8000/api/post/'+this.id+'/update', this.post.data)
-            .catch(error => console.log(error.response));
-            this.$router.push('/')
+            .catch(error => console.log(error.response))
+            .then(this.$router.push('/'));
+            
         },
 
         
