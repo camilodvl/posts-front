@@ -7,6 +7,7 @@ import FormCategory from '../src/components/FormCategory.vue'
 import FormPost from '../src/components/FormPost.vue'
 import EditPost from '../src/components/EditPost.vue'
 import EditCategory from '../src/components/EditCategory.vue'
+import PostDetails from '../src/components/PostDetails.vue'
 
 const routes = [
     { path: '/category', component: Category },
@@ -14,7 +15,8 @@ const routes = [
     { path: '/category/create', component: FormCategory },
     { path: '/post/create', component: FormPost },
     { path: '/post/edit/:id', component: EditPost },
-    { path: '/category/edit/:id', component: EditCategory }
+    { path: '/category/edit/:id', component: EditCategory },
+    { path: '/post/details/:id', component: PostDetails }
   ]
 
   //crear instancia del router

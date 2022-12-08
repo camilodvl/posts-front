@@ -1,6 +1,8 @@
 # posts-front
 
-This template should help get you started developing with Vue 3 in Vite.
+Integrantes:
+Camilo Andres Ramirez Muñoz
+Julian Ramirez Vasquez
 
 ## Recommended IDE Setup
 

@@ -1,20 +1,20 @@
 <template>
     <div class="container">
         <h1>Editar Post</h1>
-        <form @submit="updatePost">
+        <form method="POST" v-on:submit.prevent="updatePost()" >
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="name" placeholder="Ingrese nombre del post"
-                    v-model="post.data.name">
+                    v-model="post.data.name" required="true">
             </div>
             <div class="form-group">
                 <label for="descr">Descripcion</label>
                 <input type="text" class="form-control" id="descr" placeholder="Ingrese descripcion del post"
-                    v-model="post.data.description">
+                    v-model="post.data.description" required="true">
             </div>
             <div class="form-group">
                 <label for="category">Categoria</label>
-                <select class="form-control" id="category" v-model="post.data.category_id">
+                <select class="form-control" id="category" v-model="post.data.category_id" required="true">
                     <template v-for="categoria in categorias.data">
                         <option v-bind:value="categoria.id">{{categoria.name}}</option>
                     </template>
@@ -24,7 +24,7 @@
 
             <div class="form-group">
                 <label for="state">Estado</label>
-                <select class="form-control" id="state" v-model="post.data.state">
+                <select class="form-control" id="state" v-model="post.data.state" required="true">
  
                     <option v-bind:value="'Publicado'">Publicado</option>
                     <option v-bind:value="'No Publicado'">No Publicado</option>
@@ -34,7 +34,7 @@
             </div>
 
 
-            <button class="btn btn-primary">Actualizar</button>
+            <input type="submit" class="btn btn-primary" value="Actualizar">
         </form>
     </div>
 
@@ -73,8 +73,9 @@ export default {
     methods: {
         updatePost() {
             axios.put('http://localhost:8000/api/post/'+this.id+'/update', this.post.data)
-            .catch(error => console.log(error.response))
-            .then(this.$router.push('/'));
+            .catch(error => console.log(error.response));
+            alert("Post Actualizado");
+            window.location.replace("http://127.0.0.1:5173");
             
         },
 

@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <div>
-        <a href="#/post/create" class="btn btn-primary">Crear</a>
+        <a href="#/post/create" class="btn btn-primary">Crear nuevo post</a>
     </div>
     <div>
         <table class="table">
@@ -11,8 +11,9 @@
       <th scope="col">Nombre</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Categoria</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col">Detalles</th>
+      <th scope="col">Eliminar</th>
+      <th scope="col">Modificar</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,7 @@
       <td>{{post.name}}</td>
       <td>{{post.description}}</td>
       <td>{{categorias.data.find(categoria=>categoria.id==post.category_id).name}}</td>
+      <td><router-link :to="('/post/details/'+post.id)"><i class="fa-solid fa-circle-info" data-toggle="tooltip" data-placement="left" title="Detalles"></i></router-link></td>
       <td><button class="btn btn-danger" v-on:click="deletePost(post.id)"><i class="fa-solid fa-trash"></i></button></td>
       <td><router-link :to="('/post/edit/'+post.id)"><i class="fa-solid fa-pen-to-square" style="color: darkgoldenrod"></i></router-link></td>
     </tr>
