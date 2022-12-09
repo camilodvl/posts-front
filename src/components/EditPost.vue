@@ -44,7 +44,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'CreatePost',
+    name: 'EditPost',
     data() {
         return {
             id: this.$route.params.id,

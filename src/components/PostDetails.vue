@@ -20,7 +20,7 @@
 <script>
 
 export default {
-    name: 'CreatePost',
+    name: 'PostDetails',
     data() {
         return {
             id: this.$route.params.id,

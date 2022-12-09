@@ -44,7 +44,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'CreatePost',
+    name: 'AllPostPublicado',
     data() {
         return {
             categorias: [],

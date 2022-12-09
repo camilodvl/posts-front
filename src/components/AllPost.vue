@@ -58,7 +58,8 @@
             .then(response => response.json())
             .then((data)=> (this.posts = data))
             .then()
-    
+            
+            //se obtienen las categorias para mostrar el nombre de las categorias y no el id
             await fetch('http://127.0.0.1:8000/api/category/all')
             .then(response => response.json())
             .then((data)=> (this.categorias = data))

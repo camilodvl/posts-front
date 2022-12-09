@@ -12,15 +12,15 @@ import CategoryDetails from '../src/components/CategoryDetails.vue'
 import AllPost from '../src/components/AllPost.vue'
 
 const routes = [
-    { path: '/category', component: Category },
-    { path: '/', component: PostList },
-    { path: '/post/all', component: AllPost },
-    { path: '/category/create', component: FormCategory },
-    { path: '/post/create', component: FormPost },
-    { path: '/post/edit/:id', component: EditPost },
-    { path: '/category/edit/:id', component: EditCategory },
-    { path: '/post/details/:id', component: PostDetails },
-    { path: '/category/details/:id', component: CategoryDetails }
+    { path: '/category', component: Category },//Todas las categorias
+    { path: '/', component: PostList }, // todos los post con state = Publicado
+    { path: '/post/all', component: AllPost }, //todos los post
+    { path: '/category/create', component: FormCategory }, //formulario de creacion de categoria
+    { path: '/post/create', component: FormPost }, // formulario de creacion de post
+    { path: '/post/edit/:id', component: EditPost }, //Formularo de edicion de post
+    { path: '/category/edit/:id', component: EditCategory }, //Formulario de edicion de categorias
+    { path: '/post/details/:id', component: PostDetails }, // Detalles del post
+    { path: '/category/details/:id', component: CategoryDetails } // detalles de la categora
   ]
 
   //crear instancia del router

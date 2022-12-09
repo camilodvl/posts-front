@@ -24,7 +24,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'CreatePost',
+    name: 'EditCategory',
     data() {
         return {
             id: this.$route.params.id,
