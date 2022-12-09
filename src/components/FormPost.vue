@@ -68,9 +68,7 @@ export default {
             axios.post('http://localhost:8000/api/post/store', this.formData)
             .catch(error => {console.log(error.response)});
             alert("Registro creado");
-            this.formData.name="";
-            this.formData.description="";
-            window.location.replace("http://127.0.0.1:5173/");
+            this.$router.push('/');
         }
     }
 }

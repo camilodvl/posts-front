@@ -1,8 +1,10 @@
+# Integrantes:
+# Camilo Andres Ramirez Muñoz
+# Julian Ramirez Vasquez
+
+
 # posts-front
 
-Integrantes:
-Camilo Andres Ramirez Muñoz
-Julian Ramirez Vasquez
 
 ## Recommended IDE Setup
 

@@ -1,20 +1,20 @@
 <template>
     <div class="container">
         <h1>Editar Categoria</h1>
-        <form @submit="updateCategory">
+        <form method="POST" v-on:submit.prevent="updateCategory()">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="name" placeholder="Ingrese nombre del post"
-                    v-model="categoria.data.name">
+                    v-model="categoria.data.name" required="true">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Descripcion</label>
                 <input type="text" class="form-control" id="description" placeholder="Ingrese descripcion del post"
-                    v-model="categoria.data.description">
+                    v-model="categoria.data.description" required="true">
             </div>
 
 
-            <button class="btn btn-primary">Crear</button>
+            <input type="submit" class="btn btn-primary" value="Actualizar categoria">
         </form>
     </div>
 
@@ -43,6 +43,7 @@ export default {
         updateCategory() {
             axios.put('http://localhost:8000/api/category/'+this.id+'/update', this.categoria.data)
             .catch(error => console.log(error.response));
+            alert("Categoria actualizada")
             this.$router.push('/category')
         },
 

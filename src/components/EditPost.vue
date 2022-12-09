@@ -75,7 +75,7 @@ export default {
             axios.put('http://localhost:8000/api/post/'+this.id+'/update', this.post.data)
             .catch(error => console.log(error.response));
             alert("Post Actualizado");
-            window.location.replace("http://127.0.0.1:5173");
+            this.$router.push('/');
             
         },
 

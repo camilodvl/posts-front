@@ -1,9 +1,12 @@
 <template>
 <div class="container-fluid">
-
-    <div>
-        <a href="#/post/create" class="btn btn-primary">Crear nuevo post</a>
-    </div>
+  
+  <h1 class="container d-flex justify-content-center">Post publicados</h1>
+  <div class="container d-flex justify-content-around">
+    <router-link :to="('/post/create')"><button class="btn btn-primary">Crear post</button></router-link>
+    <router-link :to="('/post/all')"><button class="btn btn-primary">Ver todos (Publicados y no publicados)</button></router-link>
+  </div>
+<br>
     <div>
         <table class="table">
   <thead>
