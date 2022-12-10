@@ -2,6 +2,8 @@
 # Camilo Andres Ramirez Muñoz
 # Julian Ramirez Vasquez
 
+# Video explicativo:
+[Video explicativo](https://youtu.be/I44l6X-Gwx0).
 
 # posts-front
 
